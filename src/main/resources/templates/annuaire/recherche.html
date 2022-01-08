@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>Getting Started: Serving Web Content</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+</head>
+<body>
+
+
+<div class="divTable">
+	<div class="headRow">
+		<div class="headCell">ID</div>
+		<div class="headCell">NOM</div>
+		<div class="headCell">PRENOM</div>
+		<div class="headCell">TELEPHONE</div>
+		<div class="headCell">VILLE</div>
+		<div class="headCell">&nbsp</div>
+		<div class="headCell">&nbsp</div>
+	</div>
+	<th:block th:each="person:${listperson}">
+	<div class="divRow">
+		<div class="divCell" th:text="${person.id}"></div>
+		<div class="divCell" th:text="${person.name}"></div>
+		<div class="divCell" th:text="${person.surname}"></div>
+		<div class="divCell" th:text="${person.phone}"></div>
+		<div class="divCell" th:text="${person.city}"></div>
+		<div class="divCell" ><a th:href="@{|/annuaire/modifier/${person.id}|}" >Modifier</a></div>
+		<div class="divCell" ><a th:href="@{|/annuaire/del/${person.id}|}" >Supprimer</a></div>
+	</div>
+	</th:block>
+</div>
+<p>Ajouter une Personne <a href="/annuaire/ajouter">--></a></p>
+<div class="leftBlock">
+Recherche :
+<form action="#" th:action="@{/annuaire/recherche}" method="get">
+<p>
+Nom: <input type="text" name="name" />
+</p>
+<p>
+<input type="submit" value="Submit" />
+</p>
+</form>
+</div>
+</body>
+</html>

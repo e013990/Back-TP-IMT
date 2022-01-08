@@ -1,0 +1,48 @@
+.c1 {
+	text-align:center;
+}
+.c2{
+	color:red;
+}
+
+.divTable {
+	display: table;
+	width: 100px;
+	background-color: #FDA603;
+	border: 1px solid #FFA600;
+	border-spacing: 5px;
+	margin: 0 auto;
+	width: auto;
+	font-size: 15px;
+}
+
+.headRow {
+	background-color: #53C891;
+	display: table-row;
+	width: 100px;
+	clear: both;
+}
+
+.divRow {
+	display: table-row;
+	width: 100px;
+	clear: both;
+}
+
+.divCell {
+	float: left;
+	display: table-column;
+	width: 100px;
+	background-color: #53C891;
+}
+
+.headCell {
+	float: left;
+	display: table-column;
+	width: 100px;
+	background-color: #729283;
+}
+
+.leftBlock {
+	float: left;
+}
